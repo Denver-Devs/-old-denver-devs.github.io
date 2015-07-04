@@ -34,9 +34,11 @@ title: Denver Devs Hub
 </p>
 
 <ul>
+  {% for event in site.categories['events'] %}
   <li>
-    <a href="https://developdenver.org" target="_blank" alt="Develop Denver">Develop Denver</a> - August 6th & 7t
+    <a href="{{ event.link }}" target="_blank" alt="{{ event.title }}">{{ event.title }}</a> - {{ event.formatted_date }}
   </li>
+  {% endfor %}
 </ul>
 
 <p class="note">
