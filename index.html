@@ -1,165 +1,89 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Denver Devs Hub</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+title: Denver Devs Hub
+---
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Muli:300,400' rel='stylesheet' type='text/css'>
-        <style>
+<h1>Denver Devs Hub</h1>
 
-          html,
-          body {
-            color: #66676E;
-            margin: 0px auto;
-            max-width: 625px;
-            width: 100%;
-          }
+<p>
+  This hub/repo serves as an entry point to the various goings on of the Denver Devs community. Programmers of all levels and skill
+  sets are welcome to join and contribute.
+<p>
 
-          body {
-            box-sizing: border-box;
-            padding: 40px 15px;
+<p class="note">
+  NOTE: You can update this repo! The (Denver) dev community is about collaboration just ask
+  us to <a href="https://github.com/Denver-Devs/hub/issues/new" alt="Become a contributor">add you as a contributor</a> :)
+</p>
 
-          }
+<hr>
 
-          a {
-            color: #66676E;
-            border-bottom: 1px solid #4183c4;
-            text-decoration: none;
-          }
+<h2><a href="https://denver-dev-slack.herokuapp.com/" alt="Join the Denver Devs Slack">Join us on Slack</a></h1>
+<p>
+  We encourage using slack as a form of communication with other developers in the group. We have channels set up for general banter,
+  help in various topics, and more. If you're not familiar with slack you can
+  <a href="https://slack.com/" alt="Learn more about Slack at slack.com">learn more here</a>.
 
-          h1,
-          h2,
-          h3 {
-            color: #33343B;
-            font-family: 'Open Sans', sans-serif;
-            margin: 24px 0 8px 0;
-          }
+  <a href="https://denver-dev-slack.herokuapp.com/" class="btn">Submit your email for a slack invite</a>
+</p>
 
-          hr {
-            background: #ddd;
-            border: 0px;
-            height: 1px;
-            margin: 40px 0;
-            width: 95%;
-          }
+<hr>
 
-          p, ul {
-            font-family: 'Muli', sans-serif;
-            margin: 0 0 16px 0;
-          }
+<h2>Events</h2>
+<p>
+  What's going on around town?
+</p>
 
+<ul>
+  {% for event in site.categories['events'] %}
+  <li>
+    <a href="{{ event.link }}" target="_blank" alt="{{ event.title }}">{{ event.title }}</a> - {{ event.formatted_date }}
+  </li>
+  {% endfor %}
+</ul>
 
-          .btn {
-            color: #fff;
-            display: inline-block;
-            background: #4183c4;
-            margin: 16px 0;
-            padding: 8px 12px;
-          }
+<p class="note">
+NOTE: Want your event displayed here? Open a <a href="https://github.com/Denver-Devs/hub/issues" alt="submit a ticket">ticket</a> and
+let us know the details and we'll add it to this document or even better submit a pull request!
+</p>
 
+<hr>
 
-          .note {
-            font-style: italic;
-            font-size:14px;
-          }
+<h2>Learning Resources</h2>
 
-          .sub {
-            text-transform: uppercase;
-          }
+<h3>Study Groups</h3>
+<p class="note">
+  NOTE: If you want to focus in on a particular subject we welcome you to create a repo or slack and invite others to join you.
+  <a href="https://github.com/Denver-Devs/hub/issues/new" alt="Need help?">Need help?</a>
+</p>
 
-        </style>
-    </head>
-    <body>
+<ul>
+  <li><a href="http://www.meetup.com/Denver-Code-Club/" target="_blank">Denver Code Club</a> slack channel: #meetup-denvercodeclub</li>
+</ul>
 
-      <h1>Denver Devs Hub</h1>
+<h3 class="sub">Functional Reactive Programming</h3>
+<ul>
+  <li>Slack channel: #topic-fp</li>
+  <li>Repo: <a href="https://github.com/Denver-Devs/the-road-to-frp" alt="The Road to FRP Repo">/the-road-to-frp</a></li>
+</ul>
 
-        <p>
-          This hub/repo serves as an entry point to the various goings on of the Denver Devs community. Programmers of all levels and skill
-          sets are welcome to join and contribute.
-        <p>
+<h3>Local Education</h3>
+<h4><a href="http://www.galvanize.com/courses/full-stack/">Galvanize Full-Stack</a></h4>
+A 24-week, immersive program for beginners based in Denver and Boulder.
 
-        <p class="note">
-          NOTE: You can update this repo! The (Denver) dev community is about collaboration just ask
-          us to <a href="https://github.com/Denver-Devs/hub/issues/new" alt="Become a contributor">add you as a contributor</a> :)
-        </p>
+<hr>
 
-      <hr />
+<h2>Denver Devs / Slack Code of Conduct</h2>
 
-      <h2><a href="https://denver-dev-slack.herokuapp.com/" alt="Join the Denver Devs Slack">Join us on Slack</a></h1>
-        <p>
-          We encourage using slack as a form of communication with other developers in the group. We have channels set up for general banter,
-          help in various topics, and more. If you're not familiar with slack you can
-          <a href="https://slack.com/" alt="Learn more about Slack at slack.com">learn more here</a>.
+<p name="CoC">
+  Denver Devs is dedicated to providing a harassment-free experience for everyone, regardless of gender identity or expression, sexual orientation,
+  disability, physical appearance, body size, race, religion or non-religion. We do not tolerate harassment of participants in any form. Harassment
+  includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion,
+  sexual images, deliberate intimidation, stalking, sustained disruption of discussions or other events, and unwelcome sexual attention.
+  If a participant engages in behavior that violates this code of conduct, the organizers may take any action they deem appropriate,
+  including warning the offender or expulsion from the group.
+</p>
 
-          <a href="https://denver-dev-slack.herokuapp.com/" class="btn">Submit your email for a slack invite</a>
-        </p>
+<p>Direct Message <a href="https://denver-devs.slack.com/team/danhannigan">@danhannigan</a> on <a href="https://denver-devs.slack.com/team/danhannigan">Slack/<a href="https://twitter.com/danhannigan">
+  Twitter</a> if you need help.</p>
 
-
-      <hr />
-
-
-      <h2>Events</h2>
-        <p>
-          What's going on around town?
-        </p>
-
-        <ul>
-          <li>
-            <a href="https://developdenver.org" target="_blank" alt="Develop Denver">Develop Denver</a> - August 6th & 7t
-          </li>
-        </ul>
-
-        <p class="note">
-        NOTE: Want your event displayed here? Open a <a href="https://github.com/Denver-Devs/hub/issues" alt="submit a ticket">ticket</a> and
-        let us know the details and we'll add it to this document or even better submit a pull request!
-        </p>
-
-
-      <hr />
-
-
-      <h2>Learning Resources</h2>
-
-        <h3>Study Groups</h3>
-        <p class="note">
-          NOTE: If you want to focus in on a particular subject we welcome you to create a repo or slack and invite others to join you.
-          <a href="https://github.com/Denver-Devs/hub/issues/new" alt="Need help?">Need help?</a>
-        </p>
-
-        <ul>
-          <li><a href="http://www.meetup.com/Denver-Code-Club/" target="_blank">Denver Code Club</a> slack channel: #meetup-denvercodeclub</li>
-        </ul>
-
-
-        <h3 class="sub">Functional Reactive Programming</h3>
-          <ul>
-            <li>Slack channel: #topic-fp</li>
-            <li>Repo: <a href="https://github.com/Denver-Devs/the-road-to-frp" alt="The Road to FRP Repo">/the-road-to-frp</a></li>
-          </ul>
-
-        <h3>Local Education</h3>
-        <h4><a href="http://www.galvanize.com/courses/full-stack/">Galvanize Full-Stack</a></h4>
-        A 24-week, immersive program for beginners based in Denver and Boulder.
-      <hr />
-
-
-      <h2>Denver Devs / Slack Code of Conduct</h2>
-        <p name="CoC">
-          Denver Devs is dedicated to providing a harassment-free experience for everyone, regardless of gender identity or expression, sexual orientation,
-          disability, physical appearance, body size, race, religion or non-religion. We do not tolerate harassment of participants in any form. Harassment
-          includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion,
-          sexual images, deliberate intimidation, stalking, sustained disruption of discussions or other events, and unwelcome sexual attention.
-          If a participant engages in behavior that violates this code of conduct, the organizers may take any action they deem appropriate,
-          including warning the offender or expulsion from the group.
-        </p>
-
-        <p>Direct Message <a href="https://denver-devs.slack.com/team/danhannigan">@danhannigan</a> on <a href="https://denver-devs.slack.com/team/danhannigan">Slack/<a href="https://twitter.com/danhannigan">
-          Twitter</a> if you need help.</p>
-
-        <p>Please be nice and respectful :) </p>
-
-    </body>
-</html>
+<p>Please be nice and respectful :) </p>
