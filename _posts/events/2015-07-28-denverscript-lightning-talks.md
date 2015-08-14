@@ -6,6 +6,7 @@ date: 2015-07-28 18:00
 venue: Code Talent Headquarters
 venue_url: http://www.code-talent.org
 location: 39.7619690,-104.9805820
+published: false
 ---
 ## Whats going on in JavaScript Land? (20min)
 We'll be talking about new/exciting things going on in the industry. If you have something you think we should mention, feel free to tweet us @DenverScript.

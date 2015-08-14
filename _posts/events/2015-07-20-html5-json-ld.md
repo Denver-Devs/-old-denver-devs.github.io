@@ -6,6 +6,7 @@ date: 2015-07-20 18:00
 venue: Rally
 venue_url: http://www.rallydev.com
 location: 39.7513800,-105.0013890
+published: false
 ---
 ## "JSON-LD and the Semantic Web" by Brian Sletten 
 6pm: "JSON-LD and the Semantic Web (Pt. 1)" by Brian Sletten

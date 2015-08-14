@@ -7,6 +7,7 @@ end_date: 2015-08-07
 venue: Galvanize
 venue_url: http://www.galvanize.com
 location: 39.7335360,-104.9926110
+published: false
 ---
 ## The Manifesto
 Develop Denver is built on the idea that by bringing the community of designers, developers, and those involved in creating together, we can learn, share, and create better things. 
