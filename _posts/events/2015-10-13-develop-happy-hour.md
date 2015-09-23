@@ -1,7 +1,7 @@
 ---
 title: October Develop Happy Hour
 link: http://www.meetup.com/Develop-Happy-Hour/events/225446595/
-category:
+category: events
 date: 2015-10-13 18:00
 venue: First Draft Pour House
 venue_url: http://www.firstdraftdenver.com/
