@@ -6,6 +6,7 @@ date: 2015-09-21 18:00
 venue: Rally
 venue_url: http://www.rallydev.com
 location: 39.7513800,-105.0013890
+published: false
 ---
 ## "Intro to AngularJS" and "Automated Testing AngularJS" by Venkat Subramaniam
 6 pm: "A Practical Introduction to AngularJS" by Dr. Venkat Subramaniam
