@@ -1,1 +1,5 @@
 timezone: America/Denver
+
+
+collections:
+- resources
