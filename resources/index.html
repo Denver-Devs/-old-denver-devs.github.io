@@ -3,23 +3,22 @@ layout: default
 title: Denver Devs Hub
 ---
 
-<h1>Denver Devs Hub - Resources</h1>
+<h1><a href="http://denverdevs.org">Denver Devs Hub</a> - Resources</h1>
+<p>This is a member created and maintained resource library showcasing the talks, videos, tutorials, and more that members of Denver Devs have created and elected to share. If you want to add to this list you can <a href="https://github.com/Denver-Devs/hub/issues">create a ticket</a> or contact us in the #topic-denverdevs-site channel.</p>
 
+<div class="resource-list">
 {% assign groups = site.resources | group_by: "category" | sort: "name" %}
-
 {% for group in groups %}
-    {{ group.name }}
+<h2 class="category"> {{ group.name }} </h2>
+<ul>
     {% for item in group.items %}
-
-        <H2>{{item.abbrev}}</h2>
-        <ul>
         <li>
-          <a href="{{item.link}}">
-          {{item.title}}
-          {{item.author}}
-          {{item.type}}
+          <a href="{{item.link}}" target="_blank">{{item.title}}</a> by
+          <a href="{{item.author-url}}" target="_blank">{{item.author}}</a>
+          <span class="type">{{item.type}}</span>
           </a>
         </li>
-        </ul>
     {%endfor%}
+  </ul>
 {%endfor%}
+</div>
