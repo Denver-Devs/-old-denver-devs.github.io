@@ -5,6 +5,6 @@ author: Glen Elkins
 author-url: http://www.glenelkins.com/
 category: News
 type: article
-tags: 
+tags:
 published: true
 ---
