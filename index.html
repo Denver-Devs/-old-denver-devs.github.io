@@ -3,144 +3,165 @@ layout: default
 title: Denver Devs Hub
 ---
 
-<h1>Denver Devs Hub</h1>
+<div class="introduction" style="background:#0078ff; color:#fff;">
+	<h1>Denver Devs</h1>
 
-<p>
-  This hub/repo serves as an entry point to the various goings on of the Denver Devs community. Programmers of all levels and skill
-  sets are welcome to join and contribute.
-<p>
+	<p>A Slack community of developers, engineers, designers, makers, cultivators, and more.</p>
 
-<p class="update">
-  We've launched a resource library of videos, articles, tutorials, and more created by members of the community! Located at <a href="http://denverdevs.org/resources/">denverdevs.org/resources/</a>
-</p>
+	<a href="http://join.denverdevs.org" class="btn">Join the community</a>
+	<br />
+	Already part of it? <br />Log in: <a href="http://denver-devs.slack.com">denver-devs.slack.com</a>
+</div>
 
+<div class="main-content">
 
-<p class="note">
-  NOTE: You can update this repo! The (Denver) dev community is about collaboration just ask
-  us to <a href="https://github.com/Denver-Devs/hub/issues/new" alt="Become a contributor">add you as a contributor</a> :)
-</p>
+	<section class="channels">
+		<h2>Featured Slack Channels</h2>
+		<p>We've got over 100 channels, sounds crazy right? It works though. Here are a few featured channels you'll get dropped in to right away:</p>
+		<ul>
+			<li><strong><a href="https://denver-devs.slack.com/messages/announcements/">#announcements</a></strong> - this is our default channel that you can't leave. It's usually quiet in here, but anyone is welcome to post an announcement regarding meetups, app/site launches, life announcements, and so on.</li>
+			<li><strong><a href="https://denver-devs.slack.com/messages/general/">#general</a></strong> - general chit-chat goes on here, and you can leave it if it gets too noisy.</li>
+			<li><strong><a href="https://denver-devs.slack.com/messages/help/">#help</a></strong> - stuck on a problem? Ask here. You may get redirected to a more specific #help channel (like #help-css), just to keep things tidy. </li>
+			<li><strong><a href="https://denver-devs.slack.com/messages/intros/">#intros</a></strong> - say hello!</li>
+			<li><strong><a href="https://denver-devs.slack.com/messages/topic-gigs/">#topic-gigs</a></strong> - drop open positions and "looking for work" posts here.</li>
+			<li><strong><a href="https://denver-devs.slack.com/messages/topic-random/">#topic-random</a></strong> - anything you want (within reason)</li>
+			<li><strong><a href="https://denver-devs.slack.com/messages/topic-community/">#topic-community</a></strong> - the place to discuss Denver Devs features, updates, ideas, and general community.</li>
+		</ul>
 
-<hr>
-
-<h2><a href="https://denver-dev-slack.herokuapp.com/" alt="Join the Denver Devs Slack">Join us on Slack</a></h1>
-<p>
-  We encourage using slack as a form of communication with other developers in the group. We have channels set up for general banter,
-  help in various topics, and more. If you're not familiar with slack you can
-  <a href="https://slack.com/" alt="Learn more about Slack at slack.com">learn more here</a>.
-
-  <a href="https://denver-dev-slack.herokuapp.com/" class="btn">Submit your email for a slack invite</a>
-</p>
-
-<hr>
-
-<h2>Events</h2>
-<p>
-  What's going on around town?
-</p>
-
-<ul>
-  {% for event in site.categories['events'] reversed %}
-  <li>
-    <a href="{{ event.link }}" target="_blank" alt="{{ event.title }}">{{ event.title }}</a> -
-    {% assign day = event.date | date: "%-d" %}
-    {% assign month = event.date | date: "%B" %}
-
-    {{ month }}
-    {% case day %}
-      {% when '1' or '21' or '31' %}{{ day }}st
-      {% when '2' or '22' %}{{ day }}nd
-      {% when '3' or '23' %}{{ day }}rd
-      {% else %}{{ day }}th
-    {% endcase %}
-
-    {% if event.end_date %}
-      -
-      {% assign end_day = event.end_date | date: "%-d" %}
-      {% assign end_month = event.end_date | date: "%B" %}
-
-      {% if month != end_month %}
-        {{ end_month }}
-      {% endif %}
-      {% case end_day %}
-        {% when '1' or '21' or '31' %}{{ end_day }}st
-        {% when '2' or '22' %}{{ end_day }}nd
-        {% when '3' or '23' %}{{ end_day }}rd
-        {% else %}{{ end_day }}th
-      {% endcase %}
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
-
-<p class="note">
-NOTE: Want your event displayed here? Open a <a href="https://github.com/Denver-Devs/hub/issues" alt="submit a ticket">ticket</a> and
-let us know the details and we'll add it to this document or even better submit a pull request!
-</p>
-
-<hr>
-
-<h2><a href="/resources/">Resource Library</a></h2>
-<p>
-Browse our library of videos, articles, tutorials, and more created by members of the community! Located at <a href="http://denverdevs.org/resources/">denverdevs.org/resources/</a>
-</p>
-
-<hr>
-
-<h2>Learning Resources</h2>
-
-  <br />
-  <h3>Study Groups</h3>
-
-  <h4><a href="http://www.meetup.com/Denver-Code-Club/" target="_blank">Denver Code Club</a></h4>
-  <ul class="ul-sub">
-    <li>url: <a href="http://www.meetup.com/Denver-Code-Club/" target="_blank">www.meetup.com/Denver-Code-Club</a></li>
-    <li>slack channel: #meetup-denvercodeclub</li>
-  </ul>
+		<p>Want to know more? Check out the Slack Guide we've made specifically for Denver Devs</p>
+	</section>
 
 
-  <h4>Functional Reactive Programming</h4>
-  <ul class="ul-sub">
-    <li>Slack channel: #topic-fp</li>
-    <li>Repo: <a href="https://github.com/Denver-Devs/the-road-to-frp" alt="The Road to FRP Repo">/the-road-to-frp</a></li>
-  </ul>
+  <section class="events">
+		<h2>Events to check out</h2>
+		<ul class="gridblock">
+      {% for event in site.categories['events'] reversed %}
+      <li>
+        <a href="{{ event.link }}" target="_blank" alt="{{ event.title }}">{{ event.title }}</a> -
+        {% assign day = event.date | date: "%-d" %}
+        {% assign month = event.date | date: "%B" %}
 
-  <p class="note">
-    NOTE: If you want to focus in on a particular subject we welcome you to create a repo or slack and invite others to join you.
-    <a href="https://github.com/Denver-Devs/hub/issues/new" alt="Need help?">Need help?</a>
-  </p>
+        {{ month }}
+        {% case day %}
+          {% when '1' or '21' or '31' %}{{ day }}st
+          {% when '2' or '22' %}{{ day }}nd
+          {% when '3' or '23' %}{{ day }}rd
+          {% else %}{{ day }}th
+        {% endcase %}
+
+        {% if event.end_date %}
+          -
+          {% assign end_day = event.end_date | date: "%-d" %}
+          {% assign end_month = event.end_date | date: "%B" %}
+
+          {% if month != end_month %}
+            {{ end_month }}
+          {% endif %}
+          {% case end_day %}
+            {% when '1' or '21' or '31' %}{{ end_day }}st
+            {% when '2' or '22' %}{{ end_day }}nd
+            {% when '3' or '23' %}{{ end_day }}rd
+            {% else %}{{ end_day }}th
+          {% endcase %}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="note-info">NOTE: Want your event displayed here? Open a ticket and let us know the details and we'll add it to this document or even better submit a pull request!</div>
+  </section>
 
 
-  <h3>Local Education</h3>
+  <section class="meetups">
+  		<h2>Meetups we <3</h2>
+  		<ul class="gridblock">
 
-  <h4><a href="https://denver-devs.slack.com/messages/topic-mentor/">Mentorship</a></h4>
-  <ul class="ul-sub">
-    <li>Community curated education is the illest. Reach out on the slack channel <a href="https://denver-devs.slack.com/messages/topic-mentor/">#topic-community</a></li>
-  </ul>
+        <li>
+          <a href="https://creativemornings.com/cities/den">CreativeMornings - Denver</a>
+        </li>
 
-  <h4><a href="http://turing.io/">Turing School of Software & Design</a></h4>
-  <ul class="ul-sub">
-    <li>Turns great people into outstanding developers.</li>
-  </ul>
+        <li>
+          <a href="http://www.meetup.com/Develop-Happy-Hour/">Develop Happy Hour</a>
+          <ul>
+            <li><a href="https://denver-devs.slack.com/messages/meetup-devhappyhour/">#meetup-devhappyhour</a></li>
+          </ul>
+        </li>
 
-  <h4><a href="http://www.galvanize.com/courses/full-stack/">Galvanize Full-Stack</a></h4>
-  <ul class="ul-sub">
-    <li>A 24-week, immersive program for beginners based in Denver and Boulder.</li>
-  </ul>
+        <li>
+          <a href="http://www.meetup.com/DenverScript/">DenverScript</a>
+          <ul>
+            <li><a href="https://denver-devs.slack.com/messages/meetup-denverscript/">#meetup-denverscript</a></li>
+          </ul>
+        </li>
 
-<hr>
+        <li>
+          <a href="http://www.meetup.com/Denver-Code-Club/">Denver Code Club</a>
+          <ul>
+            <li><a href="https://denver-devs.slack.com/messages/meetup-denvercodeclub/">#meetup-denvercodeclub</a>
+          </ul>
+        </li>
 
-<h2>Denver Devs / Slack Code of Conduct</h2>
+        <li>
+          <a href="http://www.meetup.com/denver-creative-tech/">Denver Creative Tech</a>
+        </li>
 
-<p name="CoC">
-  Denver Devs is dedicated to providing a harassment-free experience for everyone, regardless of gender identity or expression, sexual orientation,
-  disability, physical appearance, body size, race, religion or non-religion. We do not tolerate harassment of participants in any form. Harassment
-  includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion,
-  sexual images, deliberate intimidation, stalking, sustained disruption of discussions or other events, and unwelcome sexual attention.
-  If a participant engages in behavior that violates this code of conduct, the organizers may take any action they deem appropriate,
-  including warning the offender or expulsion from the group.
-</p>
+        <li>
+          <a href="http://www.meetup.com/Ember-js-Denver/">Ember.js Denver</a>
+          <ul>
+            <li><a href="https://denver-devs.slack.com/messages/meetup-emberjs/">#meetup-emberjs</a></li>
+          </ul>
+        </li>
 
-<p>Direct Message <a href="https://denver-devs.slack.com/team/danhannigan">@danhannigan</a> on <a href="https://denver-devs.slack.com/team/danhannigan">Slack/<a href="https://twitter.com/danhannigan">
-  Twitter</a> if you need help.</p>
+        <li>
+          <a href="https://www.girldevelopit.com/chapters/denver">Girl Develop It - Denver</a>
+        </li>
 
-<p>Please be nice and respectful :) </p>
+        <li>
+          <a href="https://www.girldevelopit.com/chapters/boulder">Girl Develop It - Boulder</a>
+        </li>
+
+        <li>
+          <a href="http://adclubdenver.com/Kegs-With-Legs">Kegs With Legs</a>
+        </li>
+
+        <li>
+          <a href="http://www.meetup.com/refreshdenver/">Refresh Denver</a>
+        </li>
+
+        <li>
+          <a href="http://www.meetup.com/Women-Who-Code-Boulder-Denver/">Women Who Code Boulder/Denver</a>
+        </li>
+  		</ul>
+  	</section>
+
+
+  	<section class="around">
+  	<h2>Denver Devs Around the Web</h2>
+
+  		<h4><a href="https://github.com/Denver-Devs">Denver Devs Github Org</a></h4>
+  		<p>We're working on some pretty cool projects together, including this page - you can request org membership in the Slack or by shooting us an email.</p>
+
+  		<h4><a href="http://denverdevs.org/resources/">Resource Library</a></h4>
+  		<p>Browse our library of videos, articles, tutorials, and more created by members of the community! Located at denverdevs.org/resources/</p>
+
+  		<h4><a href="https://medium.com/denver-devs">Medium Publication</a></h4>
+  		<p>Articles written by community members and published under the Denver Devs Publication. Join <a href="https://denver-devs.slack.com/messages/topic-medium">#topic-medium</a> on Slack for more info.</p>
+  	</section>
+
+  	<section class="coc">
+  		<h2>Code of Conduct</h2>
+  		<p name="CoC">
+  		  Denver Devs is dedicated to providing a harassment-free experience for everyone, regardless of gender identity or expression, sexual orientation,
+  		  disability, physical appearance, body size, race, religion or non-religion. We do not tolerate harassment of participants in any form. Harassment
+  		  includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion,
+  		  sexual images, deliberate intimidation, stalking, sustained disruption of discussions or other events, and unwelcome sexual attention.
+  		  If a participant engages in behavior that violates this code of conduct, the organizers may take any action they deem appropriate,
+  		  including warning the offender or expulsion from the group.
+  		</p>
+
+      <p>Direct Message <a href="https://denver-devs.slack.com/team/danhannigan">@danhannigan</a> on <a href="https://denver-devs.slack.com/team/danhannigan">Slack/<a href="https://twitter.com/danhannigan">
+        Twitter</a> if you need help.</p>
+
+      <p>Please be nice and respectful :) </p>
+  	</section>
+
+  </div>

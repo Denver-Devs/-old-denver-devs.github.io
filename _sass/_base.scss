@@ -1,13 +1,182 @@
 // Base
 
 html, body {
-    color: #666;
-    margin: 0px auto;
-    max-width: 625px;
-    width: 100%;
+  padding: 0;
+  margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+  font-family: 'Open Sans', sans-serif;
+	color: #333;
 }
 
-body {
-    box-sizing: border-box;
-    padding: 40px 15px;
+
+section {
+	padding: 32px;
+
+	@media screen and (min-width: 640px) {
+		padding: 48px
+	}
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul li {
+	margin-bottom: 24px;
+}
+
+header {
+	position: fixed;
+	background: $mainAccent;
+	color: #fff;
+	width: 100%;
+
+	nav {
+		padding: 12px;
+		float: right;
+		list-style: none;
+		margin: 0;
+
+		li {
+			display: inline-block;
+			margin-left: 12px;
+			font-size: 14px;
+			line-height: 14px;
+
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+.introduction {
+	padding: 64px 16px;
+	text-align: center;
+
+		@media screen and (min-width: 640px) {
+			padding: 96px 48px;
+		}
+
+	h1 {
+		font-size: 32px;
+		color: #fff;
+		text-transform: uppercase;
+
+		@media screen and (min-width: 640px) {
+			font-size: 48px;
+		}
+	}
+
+	p {
+		max-width: 580px;
+		margin: 24px auto;
+
+		@media screen and (min-width: 640px) {
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+
+	.btn {
+		display: inline-block;
+		margin: 24px 0 48px 0;
+		background: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $mainAccent;
+		padding: 20px;
+		text-decoration: none;
+	}
+
+	a {
+		color: #fff;
+	}
+}
+
+.main-content {
+	max-width: 760px;
+	margin: 0px auto;
+}
+
+
+.gridblock {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+
+	> li {
+		border: 1px solid #efefef;
+		font-weight: bold;
+		margin: 0 12px 12px 0;
+		padding: 12px;
+		font-family: Helvetica, sans-serif;
+		color: red;
+		flex: 0 1 100%;
+
+
+		@media screen and (min-width: 640px) {
+			flex: 0 1 25%;
+		}
+	}
+
+	ul {
+		margin: 6px 0 0 0;
+		color: #333;
+		padding: 0;
+		list-style: none;
+		font-size: 14px;
+		font-weight: normal;
+
+		li {
+			margin: 0;
+			padding: 0;
+			line-height: 1.2;
+
+			&:nth-child(1) {
+				font-weight: bold;
+				font-size: 13px;
+			}
+
+			&:nth-child(2) {
+				margin-top:12px;
+				font-size: 11px;
+			}
+		}
+	}
+}
+
+section h4,
+section h4 a {
+	color: red;
+}
+
+section a {
+  color: red;
+}
+
+section h4 + p {
+	margin-top: 0;
+}
+
+.note-info {
+	max-width: 580px;
+	padding: 12px;
+	box-shadow: 1px 2px #ddd;
+	border: 1px solid #efefef;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+footer {
+	padding: 10px;
+	background: #efefef;
+	text-align: center;
+	font-size: 12px;
 }
