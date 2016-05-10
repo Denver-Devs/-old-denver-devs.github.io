@@ -67,7 +67,14 @@ title: Denver Devs Hub
       </li>
       {% endfor %}
     </ul>
-    <div class="note-info">NOTE: Want your event displayed here? Open a ticket and let us know the details and we'll add it to this document or even better submit a pull request!</div>
+		{% if site.categories'events' != null %}
+			<div class="note-info">Want your event displayed here too? Open a ticket and let us know the details and we'll add it to this document or even better submit a pull request!</div>
+		{% else %}
+			<div class="note-info">
+			<h4>Dang! No events have been posted.</h4>
+			<p>Help us out by adding an event here: either by opening a ticket or mentioning it to us in the Slack</p>
+			</div>
+		{% endif %}
   </section>
 
 
