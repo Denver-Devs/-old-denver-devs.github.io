@@ -2,4 +2,5 @@ timezone: America/Denver
 
 
 collections:
-- resources
+  - resources
+  - meetups

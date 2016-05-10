@@ -73,64 +73,22 @@ title: Denver Devs Hub
 
   <section class="meetups">
   		<h2>Meetups we <3</h2>
-  		<ul class="gridblock">
 
-        <li>
-          <a href="https://creativemornings.com/cities/den">CreativeMornings - Denver</a>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/Develop-Happy-Hour/">Develop Happy Hour</a>
-          <ul>
-            <li><a href="https://denver-devs.slack.com/messages/meetup-devhappyhour/">#meetup-devhappyhour</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/DenverScript/">DenverScript</a>
-          <ul>
-            <li><a href="https://denver-devs.slack.com/messages/meetup-denverscript/">#meetup-denverscript</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/Denver-Code-Club/">Denver Code Club</a>
-          <ul>
-            <li><a href="https://denver-devs.slack.com/messages/meetup-denvercodeclub/">#meetup-denvercodeclub</a>
-          </ul>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/denver-creative-tech/">Denver Creative Tech</a>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/Ember-js-Denver/">Ember.js Denver</a>
-          <ul>
-            <li><a href="https://denver-devs.slack.com/messages/meetup-emberjs/">#meetup-emberjs</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="https://www.girldevelopit.com/chapters/denver">Girl Develop It - Denver</a>
-        </li>
-
-        <li>
-          <a href="https://www.girldevelopit.com/chapters/boulder">Girl Develop It - Boulder</a>
-        </li>
-
-        <li>
-          <a href="http://adclubdenver.com/Kegs-With-Legs">Kegs With Legs</a>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/refreshdenver/">Refresh Denver</a>
-        </li>
-
-        <li>
-          <a href="http://www.meetup.com/Women-Who-Code-Boulder-Denver/">Women Who Code Boulder/Denver</a>
-        </li>
-  		</ul>
+			{% assign entries = site.meetups | group_by: "category" | sort: "name" %}
+			{% for entry in entries %}
+			<ul class="gridblock">
+				{% for item in entry.items %}
+				<li>
+					<a href="{{item.link}}" target="_blank">{{item.title}}</a>
+					{% if item.slackLink %}
+						<ul>
+							<li><a href="{{item.slackLink}}" target="_blank">#{{item.slackChannel}}</a></li>
+						</ul>
+					{% endif %}
+				</li>
+				{%endfor%}
+			</ul>
+			{%endfor%}
   	</section>
 
 
