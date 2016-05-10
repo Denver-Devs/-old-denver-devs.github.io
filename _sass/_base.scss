@@ -59,6 +59,8 @@ header {
 .introduction {
 	padding: 64px 16px;
 	text-align: center;
+  background: $mainAccent;
+  color: #fff;
 
 		@media screen and (min-width: 640px) {
 			padding: 96px 48px;
