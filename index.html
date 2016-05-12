@@ -3,7 +3,7 @@ layout: default
 title: Denver Devs Hub
 ---
 
-<div class="introduction" style="background:#0078ff; color:#fff;">
+<div class="introduction">
 	<h1>Denver Devs</h1>
 
 	<p>A Slack community of developers, engineers, designers, makers, cultivators, and more.</p>
@@ -67,7 +67,14 @@ title: Denver Devs Hub
       </li>
       {% endfor %}
     </ul>
-    <div class="note-info">NOTE: Want your event displayed here? Open a ticket and let us know the details and we'll add it to this document or even better submit a pull request!</div>
+		{% if site.categories'events' != null %}
+			<div class="note-info">Want your event displayed here too? Open a ticket and let us know the details and we'll add it to this document or even better submit a pull request!</div>
+		{% else %}
+			<div class="note-info">
+			<h4>Dang! No events have been posted.</h4>
+			<p>Help us out by adding an event here: either by opening a ticket or mentioning it to us in the Slack</p>
+			</div>
+		{% endif %}
   </section>
 
 
@@ -121,5 +128,12 @@ title: Denver Devs Hub
 
       <p>Please be nice and respectful :) </p>
   	</section>
+
+		<section class="bonus">
+			<h4>Grab a Colorado Style Denver Devs Slack theme while you're at it!</h4>
+			<code>#002868,#BF0A30,#BF0A30,#FFFFFF,#BF0A30,#FFFFFF,#FFD700,#FFD700</code>
+			<p>Copy this code, head to Slack and go to preferences, then Sidebar Theme. <br />You can paste the code in down at the bottom of that page <br />
+			Check the <a href="https://get.slack.help/hc/en-us/articles/205166337-Customizing-your-Slack-theme">slack documentation</a> for more info on themes</p>
+		</section>
 
   </div>
