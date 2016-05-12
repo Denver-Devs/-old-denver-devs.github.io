@@ -182,3 +182,30 @@ footer {
 	text-align: center;
 	font-size: 12px;
 }
+
+.bonus {
+  background: lighten($mainAccent, 1.8);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+
+  h4 {
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  code {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: $mainAccent;
+  }
+}
