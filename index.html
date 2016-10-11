@@ -32,52 +32,6 @@ title: Denver Devs Hub
 	</section>
 
 
-  <section class="events">
-		<h2>Events to check out</h2>
-		<ul class="gridblock">
-      {% for event in site.categories['events'] reversed %}
-      <li>
-        <a href="{{ event.link }}" target="_blank" alt="{{ event.title }}">{{ event.title }}</a> -
-        {% assign day = event.date | date: "%-d" %}
-        {% assign month = event.date | date: "%B" %}
-
-        {{ month }}
-        {% case day %}
-          {% when '1' or '21' or '31' %}{{ day }}st
-          {% when '2' or '22' %}{{ day }}nd
-          {% when '3' or '23' %}{{ day }}rd
-          {% else %}{{ day }}th
-        {% endcase %}
-
-        {% if event.end_date %}
-          -
-          {% assign end_day = event.end_date | date: "%-d" %}
-          {% assign end_month = event.end_date | date: "%B" %}
-
-          {% if month != end_month %}
-            {{ end_month }}
-          {% endif %}
-          {% case end_day %}
-            {% when '1' or '21' or '31' %}{{ end_day }}st
-            {% when '2' or '22' %}{{ end_day }}nd
-            {% when '3' or '23' %}{{ end_day }}rd
-            {% else %}{{ end_day }}th
-          {% endcase %}
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-		{% if site.categories'events' != null %}
-			<div class="note-info">Want your event displayed here too? Open a ticket and let us know the details and we'll add it to this document or even better submit a pull request!</div>
-		{% else %}
-			<div class="note-info">
-			<h4>Dang! No events have been posted.</h4>
-			<p>Help us out by adding an event here: either by opening a ticket or mentioning it to us in the Slack</p>
-			</div>
-		{% endif %}
-  </section>
-
-
   <section class="meetups">
   		<h2>Meetups we <3</h2>
 
