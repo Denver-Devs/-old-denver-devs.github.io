@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	margin-bottom: 24px;
+	@media screen and (min-width: 640px) {
+		margin-bottom: 62px;
+	}
 }
 
 h2 {

@@ -3,7 +3,7 @@ layout: default
 title: Denver Devs Hub
 ---
 
-<div class="introduction">
+<section class="introduction">
 	<h1>Denver Devs</h1>
 
 	<p>A Slack community of developers, engineers, designers, makers, cultivators, and more.</p>
@@ -11,12 +11,12 @@ title: Denver Devs Hub
 	<a href="http://join.denverdevs.org" class="btn">Join the community</a>
 	<br />
 	Already part of it? <br />Log in: <a href="http://denver-devs.slack.com">denver-devs.slack.com</a>
-</div>
+</section>
 
 <div class="main-content">
 
 	<section class="channels">
-		<h2>Featured Slack Channels</h2>
+		<h2>Our Featured Slack Channels</h2>
 		<p>We've got over 100 channels, sounds crazy right? It works though. Here are a few featured channels you'll get dropped in to right away:</p>
 		<ul>
 			<li><strong><a href="https://denver-devs.slack.com/messages/announcements/">#announcements</a></strong> - this is our default channel that you can't leave. It's usually quiet in here, but anyone is welcome to post an announcement regarding meetups, app/site launches, life announcements, and so on.</li>
@@ -33,7 +33,7 @@ title: Denver Devs Hub
 
 
   <section class="meetups">
-  		<h2>Meetups we <3</h2>
+  		<h2>Meetups we like</h2>
 
 			{% assign entries = site.meetups | group_by: "category" | sort: "name" %}
 			{% for entry in entries %}

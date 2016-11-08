@@ -30,8 +30,8 @@ ul li {
 }
 
 header {
-	position: fixed;
-	background: $mainAccent;
+	// position: fixed;
+	// background: $mainAccent;
 	color: #fff;
 	width: 100%;
 
@@ -50,6 +50,7 @@ header {
 			a {
 				color: #fff;
 				text-decoration: none;
+        font-weight: bold;
 			}
 		}
 	}
@@ -60,6 +61,7 @@ header {
 	padding: 64px 16px;
 	text-align: center;
   background: $mainAccent;
+  background: linear-gradient(45deg, $mainAccent 0%, $secondAccent 100%);
   color: #fff;
 
 		@media screen and (min-width: 640px) {
@@ -67,12 +69,12 @@ header {
 		}
 
 	h1 {
+    letter-spacing: -2px;
 		font-size: 32px;
 		color: #fff;
-		text-transform: uppercase;
 
 		@media screen and (min-width: 640px) {
-			font-size: 48px;
+			font-size: 64px;
 		}
 	}
 
@@ -87,14 +89,17 @@ header {
 	}
 
 	.btn {
-		display: inline-block;
-		margin: 24px 0 48px 0;
-		background: white;
-		text-transform: uppercase;
-		font-weight: bold;
-		color: $mainAccent;
-		padding: 20px;
-		text-decoration: none;
+    display: inline-block;
+    margin: 24px 0 48px 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #ececec 100%);
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #333;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 	}
 
 	a {
@@ -156,11 +161,11 @@ header {
 
 section h4,
 section h4 a {
-	color: red;
+	color: $mainAccent;
 }
 
 section a {
-  color: red;
+  color: $mainAccent;
 }
 
 section h4 + p {
