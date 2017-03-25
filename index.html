@@ -80,21 +80,27 @@ title: Denver Devs Hub
   		  including warning the offender or expulsion from the group.
   		</p>
 
-		<p>Please reach out to the admin team if you have any questions or need help:</p>
-		<ul>
-			<li>Dan Hannigan: <a href="https://denver-devs.slack.com/team/danhannigan">danhannigan</a> | <a href="https://twitter.com/danhannigan">
-				@danhannigan</a></li>
-			<li>Drew Dahlman: <a href="https://denver-devs.slack.com/team/@drewdahlman">drewdahlman</a> | <a href="https://twitter.com/meusPartum">
-				@meusPartum</a></li>
-			<li>James Gibson: <a href="https://denver-devs.slack.com/team/@james.the.nodester">james.the.nodester</a> | <a href="https://twitter.com/thenodester">
-				@thenodester</a></li>
-			<li>Kyle Coberly: <a href="https://denver-devs.slack.com/team/@kylecoberly">kylecoberly</a> | <a href="https://twitter.com/kylecoberly">
-				@kylecoberly</a></li>
-			<li>Michael McGuire: <a href="https://denver-devs.slack.com/team/@codewizard">codewizard</a> | <a href="https://twitter.com/absurdcoder">
-				@absurdcoder</a></li>
-		</ul>
+  		<p>Please reach out to the admin team if you have any questions or need help:</p>
 
-      <p>Please be nice and respectful :) </p>
+  		<ul class="admins">
+  			{% for admins in site.admins %}
+  			<li>
+  			<h3>{{ admins.name }}</h3>
+
+  				<p>
+  					<i class="fa fa-slack" aria-hidden="true"></i>  
+  					<a href="{{ admins.slackurl }}" target="_blank">{{ admins.slack }} </a>
+  				</p>
+
+  				<p>
+  					<i class="fa fa-twitter" aria-hidden="true"></i>  
+  					<a href="{{ admins.twitterurl }}" target="_">@{{ admins.twitter }}</a>
+  				</p>
+  			</li>
+  			{% endfor %}
+  		</ul>
+
+  		<p>Please be nice and respectful :) </p>
   	</section>
 
 		<section class="bonus">
