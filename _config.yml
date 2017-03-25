@@ -4,3 +4,4 @@ timezone: America/Denver
 collections:
   - resources
   - meetups
+  - admins
