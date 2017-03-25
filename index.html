@@ -40,7 +40,7 @@ title: Denver Devs Hub
 			<ul class="gridblock">
 				{% for item in entry.items %}
 				<li>
-					<a href="{{item.link}}" target="_blank">{{item.title}}</a>
+					<a href="{{item.link}}" target="_blank"><i class="fa fa-meetup" aria-hidden="true"></i>{{item.title}}</a>
 					{% if item.slackLink %}
 						<ul>
 							<li><a href="{{item.slackLink}}" target="_blank">#{{item.slackChannel}}</a></li>
@@ -56,13 +56,13 @@ title: Denver Devs Hub
   	<section class="around">
   	<h2>Denver Devs Around the Web</h2>
 
-  		<h4><a href="https://github.com/Denver-Devs">Denver Devs Github Org</a></h4>
+  		<h4><a href="https://github.com/Denver-Devs">Denver Devs Github Org</a>  <i class="fa fa-github" aria-hidden="true"></i></h4>
   		<p>We're working on some pretty cool projects together, including this page - you can request org membership in the Slack or by shooting us an email.</p>
 
   		<h4><a href="http://denverdevs.org/resources/">Resource Library</a></h4>
   		<p>Browse our library of videos, articles, tutorials, and more created by members of the community! Located at denverdevs.org/resources/</p>
 
-  		<h4><a href="https://medium.com/denver-devs">Medium Publication</a></h4>
+  		<h4><a href="https://medium.com/denver-devs">Medium Publication</a>  <i class="fa fa-medium" aria-hidden="true"></i></h4>
   		<p>Articles written by community members and published under the Denver Devs Publication. Join <a href="https://denver-devs.slack.com/messages/topic-medium">#topic-medium</a> on Slack for more info.</p>
 
   		<h4><a href="https://discourse.denverdevs.org/">Denver Devs Forum</a></h4>
@@ -80,21 +80,27 @@ title: Denver Devs Hub
   		  including warning the offender or expulsion from the group.
   		</p>
 
-		<p>Please reach out to the admin team if you have any questions or need help:</p>
-		<ul>
-			<li>Dan Hannigan: <a href="https://denver-devs.slack.com/team/danhannigan">danhannigan</a> | <a href="https://twitter.com/danhannigan">
-				@danhannigan</a></li>
-			<li>Drew Dahlman: <a href="https://denver-devs.slack.com/team/@drewdahlman">drewdahlman</a> | <a href="https://twitter.com/meusPartum">
-				@meusPartum</a></li>
-			<li>James Gibson: <a href="https://denver-devs.slack.com/team/@james.the.nodester">james.the.nodester</a> | <a href="https://twitter.com/thenodester">
-				@thenodester</a></li>
-			<li>Kyle Coberly: <a href="https://denver-devs.slack.com/team/@kylecoberly">kylecoberly</a> | <a href="https://twitter.com/kylecoberly">
-				@kylecoberly</a></li>
-			<li>Michael McGuire: <a href="https://denver-devs.slack.com/team/@codewizard">codewizard</a> | <a href="https://twitter.com/absurdcoder">
-				@absurdcoder</a></li>
-		</ul>
+  		<p>Please reach out to the admin team if you have any questions or need help:</p>
 
-      <p>Please be nice and respectful :) </p>
+  		<ul class="admins">
+  			{% for admins in site.admins %}
+  			<li>
+  			<h3>{{ admins.name }}</h3>
+
+  				<p>
+  					<i class="fa fa-slack" aria-hidden="true"></i>  
+  					<a href="{{ admins.slackurl }}" target="_blank">{{ admins.slack }} </a>
+  				</p>
+
+  				<p>
+  					<i class="fa fa-twitter" aria-hidden="true"></i>  
+  					<a href="{{ admins.twitterurl }}" target="_">@{{ admins.twitter }}</a>
+  				</p>
+  			</li>
+  			{% endfor %}
+  		</ul>
+
+  		<p>Please be nice and respectful :) </p>
   	</section>
 
 		<section class="bonus">
