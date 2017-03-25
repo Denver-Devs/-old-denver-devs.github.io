@@ -40,7 +40,7 @@ title: Denver Devs Hub
 			<ul class="gridblock">
 				{% for item in entry.items %}
 				<li>
-					<a href="{{item.link}}" target="_blank">{{item.title}}</a>
+					<a href="{{item.link}}" target="_blank"><i class="fa fa-meetup" aria-hidden="true"></i>{{item.title}}</a>
 					{% if item.slackLink %}
 						<ul>
 							<li><a href="{{item.slackLink}}" target="_blank">#{{item.slackChannel}}</a></li>
